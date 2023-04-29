@@ -1,0 +1,341 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+body{
+    font-family: 'Poppins';
+}
+
+/* Tout ce qui conserne la nav bar */
+nav#main-nav{
+    color: white;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    padding-left: 13%;
+    padding-right: 13%;
+    position: fixed;
+    width:100%;
+    overflow: hidden;
+    top: 0px;
+    height: 6vh;
+    z-index: 2;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+#main-nav[aria-current="page"] {
+  text-decoration: underline wavy #f8c348 0.15rem;
+  text-underline-offset: 0.5rem;
+}
+
+/* Ce qui conserne les sections */
+
+section {
+    min-height: 100vh;
+  }
+  
+  article {
+    width: 90%;
+    max-width: 1000px;
+    padding: 20px;
+    margin: 0px auto;
+  }
+  
+  h2 {
+    padding: 40px 0px 0px 0px;
+    font-size: 3em;
+    
+  }
+  
+  p {
+    font-size: 1.5em;
+  }
+
+  /* Partie Home */
+
+  section#home {
+    background-image: url(../images/macbook.jpg);
+    background-attachment: fixed;
+    color: white;
+    text-align: center;
+  }
+
+  section#home article {
+    padding-top: 5%;
+  }
+
+  /* Partie About */
+
+  section#about {
+    padding-top: 4%;
+    /* background-color: white; */
+    background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(212,203,255,1) 100%);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .profil {
+    width: auto;
+    height: 50%;
+    display: flex;
+  }
+  .cadre{
+    display: flex;
+    padding-top: 50px;
+    padding-left: 50px;
+    width: 40%;
+  }
+
+
+  .cadre img{
+    border: 1px solid black;
+    box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    transition: transform .3s;
+  }
+  
+  .cadre img:hover{
+    filter: none;
+    -webkit-filter: grayscale(0);
+    transform: scale(1.2);
+  }
+  .desc{
+    width: 70%;
+    margin-top: 50px;
+  }
+  
+  .profil-bas{
+    display: flex;
+    height: 50%;
+    width: 100%;
+  }
+
+  .skill{
+    text-align: center;
+    width: 55%;
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .langage{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(212, 203, 255, 0.358);
+    border-radius: 20px;
+    height: 50%;
+    width: 100%;
+  }
+  .langage img{
+    width: 80px;
+    height: 80px;
+  }
+  .info {
+    width: 45%;
+    height: 50%;
+    padding-top: 80px;
+    padding-left: 50px;
+  }
+
+  section#about article{
+    margin-top: 2%;
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 20px;
+    box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.3);
+    width: 1000px;
+    height: 600px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  /* Partie Projets */
+
+  section#projets {
+    background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(212,203,255,1) 100%);
+  }
+
+  section#projets h2{
+    text-align: center;
+  }
+
+  section#projets article{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .container {
+    border: 2px solid black;
+    width: 1300px;
+    height: 750px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .box{
+    border: 2px solid red;
+    width: 400px;
+    height: 300px;
+  }
+  /* Partie Parcours */
+
+  section#parcours {
+    background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(212,203,255,1) 100%);
+  }
+
+  .img-formation img{
+    width: auto;
+    height: 100px;
+  }
+
+  .carousel {
+    margin-left: 15%;
+    margin-right: 15%;
+    background-color: white;
+}
+
+ul.slides {
+    display: block;
+    position: relative;
+    height: 600px;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    list-style: none;
+}
+
+.slides * {
+    user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+}
+
+ul.slides input {
+    display: none; 
+}
+
+
+.slide-container { 
+    display: block; 
+}
+
+.slide-image {
+    display: block;
+    position: absolute;
+    height: 100%;
+    top: 0;
+    opacity: 0;
+    transition: all .7s ease-in-out;
+}   
+
+/* .slide-image img {
+    width: auto;
+    min-width: 100%;
+    height: 100%;
+} */
+
+.carousel-controls {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    font-size: 100px;
+    line-height: 600px;
+    color: #fff;
+}
+
+.carousel-controls label {
+    display: none;
+    position: absolute;
+    padding: 0 20px;
+    opacity: 0;
+    transition: opacity .2s;
+    cursor: pointer;
+}
+
+.slide-image:hover + .carousel-controls label{
+    opacity: 0.5;
+}
+
+.carousel-controls label:hover {
+    opacity: 1;
+}
+
+.carousel-controls .prev-slide {
+    width: 49%;
+    text-align: left;
+    left: 0;
+}
+
+.carousel-controls .next-slide {
+    width: 49%;
+    text-align: right;
+    right: 0;
+}
+
+.carousel-dots {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 20px;
+    z-index: 1;
+    text-align: center;
+}
+
+.carousel-dots .carousel-dot {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #fff;
+    opacity: 0.5;
+    margin: 10px;
+}
+
+input:checked + .slide-container .slide-image {
+    opacity: 1;
+    transform: scale(1);
+    transition: opacity 1s ease-in-out;
+}
+
+input:checked + .slide-container .carousel-controls label {
+     display: block; 
+}
+
+input#img-1:checked ~ .carousel-dots label#img-dot-1,
+input#img-2:checked ~ .carousel-dots label#img-dot-2,
+input#img-3:checked ~ .carousel-dots label#img-dot-3,
+input#img-4:checked ~ .carousel-dots label#img-dot-4,
+input#img-5:checked ~ .carousel-dots label#img-dot-5,
+input#img-6:checked ~ .carousel-dots label#img-dot-6 {
+	opacity: 1;
+}
+
+
+input:checked + .slide-container .nav label { display: block; }
+
+  /* Partie Contact */
+
+  section#contact {
+    background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(212,203,255,1) 100%);
+  }
+
+
+  
+  
+  
