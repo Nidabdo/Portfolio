@@ -22,8 +22,24 @@
         g=document.getElementById("g");
         d=document.getElementById("d");
         container.style.width=(800*nb)+"px";
+        const dataimages = [
+        {
+          imagelogo: "./images/scholarfab-logo.png",
+          imageUrl: "./images/im1.jpg",
+          imageText : "hdfhsrtjhngfdsgggsgsgsgsgs"
+        },{
+          imagelogo: "./images/iut-lehavre-logo.png",
+          imageUrl: "./images/im2.jpg",
+          imageText : "trshfhnrfjfrtdyjntgfh"
+        },{
+          imagelogo: "./images/lycee-logo.png",
+          imageUrl: "./images/im3.jpg",
+          imageText : "atazazda"
+        }
+        ]
         for(i=1; i<=nb;i++){
           div=document.createElement("div");
+          div.innerText = dataimages[1];
           div.className="photo";
           div.style.backgroundImage="url('images/im"+i+".jpg')";
           container.appendChild(div);
@@ -56,5 +72,72 @@
       }
     </script>
   </div>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <style>
+        /* Style pour le formulaire */
+        form {
+          max-width: 500px;
+          margin: auto;
+          background-color: #f2f2f2;
+          border-radius: 5px;
+          padding: 20px;
+        }
+        label {
+          display: block;
+          margin-bottom: 10px;
+          font-weight: bold;
+        }
+        input, textarea {
+          width: 100%;
+          padding: 12px;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          box-sizing: border-box;
+          margin-bottom: 20px;
+          font-size: 16px;
+        }
+        textarea {
+          height: 150px;
+          resize: vertical;
+        }
+        button[type="submit"] {
+          background-color: #4CAF50;
+          color: white;
+          padding: 12px 20px;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+          font-size: 16px;
+          margin-top: 10px;
+        }
+        button[type="submit"]:hover {
+          background-color: #45a049;
+        }
+        
+        /* Style pour le responsive */
+        @media screen and (max-width: 600px) {
+          form {
+            max-width: 100%;
+          }
+          input[type="submit"] {
+            width: 100%;
+          }
+        }
+      </style>
+      <form>
+        <label for="prenom">Prénom :</label>
+        <input type="text" id="prenom" name="prenom" required>
+        
+        <label for="nom">Nom :</label>
+        <input type="text" id="nom" name="nom" required>
+        
+        <label for="sujet">Sujet :</label>
+        <input type="text" id="sujet" name="sujet" required>
+        
+        <label for="message">Votre message :</label>
+        <textarea id="message" name="message" required></textarea>
+        
+        <button type="submit">Envoyer</button>
+      </form>
 </body>
 </html>
