@@ -4,9 +4,17 @@ body{
     font-family: 'Poppins';
 }
 
+
 /* Tout ce qui conserne la nav bar */
-nav#main-nav{
-    color: white;
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+.main-nav {
+  color: white;
     background-color: rgb(0, 0, 0);
     display: flex;
     justify-content: space-evenly;
@@ -22,14 +30,21 @@ nav#main-nav{
     z-index: 2;
 }
 
+
+nav li {
+  list-style: none;
+}
+nav li a:hover {
+  color: lime;
+}
+
+.active {
+  color: lime; 
+  font-weight: 600;
+}
 nav a {
   color: white;
   text-decoration: none;
-}
-
-#main-nav[aria-current="page"] {
-  text-decoration: underline wavy #f8c348 0.15rem;
-  text-underline-offset: 0.5rem;
 }
 
 /* Ce qui conserne les sections */
@@ -373,15 +388,14 @@ input:checked + .slide-container .nav label { display: block; }
   }
 
   .container2 {
-    display: flex;
+    /* display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-between; */
     max-width: 1200px;
     margin: 0 auto;
     padding: 50px 20px;
   }
   .form-container {
-    flex-basis: calc(73% - 20px);
     background-color: #ffffff;
     padding: 30px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
@@ -427,42 +441,23 @@ input:checked + .slide-container .nav label { display: block; }
   .form-container button:hover {
     background-color: #00796b;
   }
-  .info-container {
-    flex-basis: calc(30% - 20px);
-    background-color: #ffffff;
-    padding: 30px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
+  
+  .form-reseaux{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
   }
-  .info-container img{
+  .form-container img{
     width: 50px;
-    height: auto;
-    margin-left: 10px;
+    height: 50px;
+    margin-left: 40px;
   }
-  .info-container h2 {
-    font-size: 28px;
-    font-weight: bold;
-    margin-bottom: 20px;
-    color: #333333;
+  section#contact h3{
+    font-size: 2em;
   }
-  .info-container p {
-    font-size: 18px;
-    margin-bottom: 10px;
-    color: #333333;
-  }
-  .info-container ul {
-    list-style: none;
-    margin-top: 20px;
-  }
-  .info-container li {
-    font-size: 18px;
-    margin-bottom: 10px;
-    color: #333333;
-  }
-  .info-container li span {
-    font-weight: bold;
-    margin-right: 10px;
-  }
+  
+  
   @media screen and (max-width: 768px) {
     .container {
       flex-wrap: wrap;

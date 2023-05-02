@@ -9,13 +9,17 @@
     <title>Portfolio</title>
 </head> 
 <body>
-    <nav id="main-nav">
-        <a href="#home" class="active">HOME</a>
+  <div class="main-nav">
+    <nav class="navigation">
+        <li>
+        <a href="#home" >HOME</a>
         <a href="#about">ABOUT ME</a>
         <a href="#projets">PROJETS</a> 
         <a href="#parcours">PARCOURS</a>
         <a href="#contact">CONTACT</a>
-    </nav>
+      </li>
+  </nav>
+</div>
     <section id="home">
         <article>
           <h2>Nicolas Lambert</h2>
@@ -136,14 +140,10 @@
     <section id="contact">
         <article>
           <div class="container2">
-            <div class="info-container">
-              <h2>Mes réseaux :</h2>
-              <ul>
-                <li><img src="./images/github.png" alt="github"><img src="./images/linkedin.png" alt="linkedin"><img src="./images/email.png" alt="email"></li>
-              </ul>
-            </div>
             <div class="form-container">
-              <h2>Pour me contacter</h2>
+              <div class="form-reseaux">
+                <h3>Pour me contacter :</h3><img src="./images/github.png" alt="github"><img src="./images/linkedin.png" alt="linkedin"><img src="./images/email.png" alt="email">
+              </div>
               <form>
                 <label for="nom">Nom :</label>
                 <input type="text" id="nom" name="nom" placeholder="Entrez votre nom" required>
@@ -152,12 +152,44 @@
                 <label for="sujet">Sujet :</label>
                 <input type="text" id="sujet" name="sujet" placeholder="Entrez le sujet de votre message" required>
                 <label for="message">Message :</label>
-                <textarea id="message" name="message" placeholder="Entrez votre message" required></textarea>
+                <input id="message" name="message" placeholder="Entrez votre message" required></input>
                 <button type="submit">Envoyer</button>
               </form>
             </div>
           </div>
         </article>
     </section>
+    <script>// Get all sections that have an ID defined
+      const sections = document.querySelectorAll("section[id]");
+      
+      // Add an event listener listening for scroll
+      window.addEventListener("scroll", navHighlighter);
+      
+      function navHighlighter() {
+        
+        // Get current scroll position
+        let scrollY = window.pageYOffset;
+        
+        // Now we loop through sections to get height, top and ID values for each
+        sections.forEach(current => {
+          const sectionHeight = current.offsetHeight;
+          const sectionTop = current.offsetTop - 50;
+          sectionId = current.getAttribute("id");
+          
+          /*
+          - If our current scroll position enters the space where current section on screen is, add .active class to corresponding navigation link, else remove it
+          - To know which link needs an active class, we use sectionId variable we are getting while looping through sections as an selector
+          */
+          if (
+            scrollY > sectionTop &&
+            scrollY <= sectionTop + sectionHeight
+          ){
+            document.querySelector(".navigation a[href*=" + sectionId + "]").classList.add("active");
+          } else {
+            document.querySelector(".navigation a[href*=" + sectionId + "]").classList.remove("active");
+          }
+        });
+      }
+      </script>
 </body>
 </html> 
