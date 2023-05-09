@@ -76,64 +76,7 @@
         <article>
           <h2>Mon parcours</h2>
           <div>
-            <div class="carousel">
-              <ul class="slides">
-                <input type="radio" name="radio-buttons" id="img-1" checked />
-                <li class="slide-container">
-                  <div class="slide-image">
-                    <div class="slide1">
-                      <img src="images/scholarfab-logo.png">
-                      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam omnis quod soluta minus architecto nobis, odit quis veniam a quibusdam commodi eum quia quasi sint voluptates officia tempore voluptatem eaque.</p>
-                    </div>
-                  </div>
-                  <div class="carousel-controls">
-                    <label for="img-3" class="prev-slide">
-                      <span>&lsaquo;</span>
-                    </label>
-                    <label for="img-2" class="next-slide">
-                      <span>&rsaquo;</span>
-                    </label>
-                  </div>
-                </li>
-                <input type="radio" name="radio-buttons" id="img-2" />
-                <li class="slide-container">
-                  <div class="slide-image">
-                    <div class="slide2">
-                      <img src="images/iut-lehavre-logo.png">
-                    </div>
-                  </div>
-                  <div class="carousel-controls">
-                    <label for="img-1" class="prev-slide">
-                      <span>&lsaquo;</span>
-                    </label>
-                    <label for="img-3" class="next-slide">
-                      <span>&rsaquo;</span>
-                    </label>
-                  </div>
-                </li>
-                <input type="radio" name="radio-buttons" id="img-3" />
-                <li class="slide-container">
-                  <div class="slide-image">
-                    <div class="slide3">
-                      <img src="images/lycee-logo.png">
-                    </div>
-                  </div>
-                  <div class="carousel-controls">
-                    <label for="img-2" class="prev-slide">
-                      <span>&lsaquo;</span>
-                    </label>
-                    <label for="img-1" class="next-slide">
-                      <span>&rsaquo;</span>
-                    </label>
-                  </div>
-                </li>
-                <div class="carousel-dots">
-                  <label for="img-1" class="carousel-dot" id="img-dot-1"></label>
-                  <label for="img-2" class="carousel-dot" id="img-dot-2"></label>
-                  <label for="img-3" class="carousel-dot" id="img-dot-3"></label>
-                </div>
-              </ul>
-            </div>
+           parcours
           </div>
         </article>
     </section>
@@ -142,7 +85,7 @@
           <div class="container2">
             <div class="form-container">
               <div class="form-reseaux">
-                <h3>Pour me contacter :</h3><img src="./images/github.png" alt="github"><img src="./images/linkedin.png" alt="linkedin"><img src="./images/email.png" alt="email">
+                <h3>Pour me contacter :</h3><a href="https://github.com/Nidabdo" target="_blank"><img src="./images/github.png" alt="github"></a><a href="https://www.linkedin.com/in/nicolas-lambert-980465241/" target="_blank"><img src="./images/linkedin.png" alt="linkedin"></a><a href="mailto:nicolas.lambert02@orange.fr"><img src="./images/email.png" alt="email"></a>
               </div>
               <form>
                 <label for="nom">Nom :</label>
@@ -152,7 +95,7 @@
                 <label for="sujet">Sujet :</label>
                 <input type="text" id="sujet" name="sujet" placeholder="Entrez le sujet de votre message" required>
                 <label for="message">Message :</label>
-                <input id="message" name="message" placeholder="Entrez votre message" required></input>
+                <textarea id="message" name="message" placeholder="Entrez votre message" required></textarea>
                 <button type="submit">Envoyer</button>
               </form>
             </div>
