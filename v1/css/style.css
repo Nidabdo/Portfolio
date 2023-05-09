@@ -14,35 +14,36 @@ html {
 
 
 .main-nav {
+  align-items: center;
   color: white;
-    background-color: rgb(0, 0, 0);
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    text-align: center;
-    padding-left: 13%;
-    padding-right: 13%;
-    position: fixed;
-    width:100%;
-    overflow: hidden;
-    top: 0px;
-    height: 6vh;
-    z-index: 2;
+  background-color: rgb(0, 0, 0);
+  text-align: center;
+  padding-left: 13%;
+  padding-right: 13%;
+  position: fixed;
+  width:100%;
+  overflow: hidden;
+  top: 0px;
+  height: 6vh;
+  z-index: 2;
 }
 
-
-nav li {
+li {
   list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100%;
 }
-nav li a:hover {
-  color: lime;
+li a:hover {
+  color: rgb(30,144,255);
 }
 
 .active {
-  color: lime; 
+  color: rgb(30,144,255); 
   font-weight: 600;
 }
-nav a {
+a {
   color: white;
   text-decoration: none;
 }
@@ -177,15 +178,17 @@ section {
 
   /* Partie Projets */
 
-  section#projets {
-    background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(212,203,255,1) 100%);
+  section#experience {
+    background-image: url(../images/fond-brique.avif);
+    background-color: rgba(30,144,255, 0.5);
+    background-attachment: fixed;
   }
 
-  section#projets h2{
+  section#experience h2{
     text-align: center;
   }
 
-  section#projets article{
+  section#experience article{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -207,7 +210,7 @@ section {
   /* Partie Parcours */
 
   section#parcours {
-    background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(212,203,255,1) 100%);
+    background: white;
   }
 
   
