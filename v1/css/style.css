@@ -89,8 +89,7 @@ section {
 
   section#about {
     padding-top: 4%;
-    /* background-color: white; */
-    background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(212,203,255,1) 100%);
+    background-color: white;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -148,7 +147,7 @@ section {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgba(212, 203, 255, 0.358);
+    background-color: rgba(30, 143, 255, 0.200);
     border-radius: 20px;
     height: 50%;
     width: 100%;
@@ -179,8 +178,9 @@ section {
   /* Partie Projets */
 
   section#experience {
+    background-color: rgb(30, 143, 255);
+    background-blend-mode: multiply;
     background-image: url(../images/fond-brique.avif);
-    background-color: rgba(30,144,255, 0.5);
     background-attachment: fixed;
   }
 
@@ -212,13 +212,27 @@ section {
   section#parcours {
     background: white;
   }
-
   
+  .parcours-container{
+    border: 2px solid black;
+  }
+
+  .parcours-box{
+    border: 2px solid red;
+    display: flex;
+    flex-direction: row;
+    }
+    img{
+      width: 200px;
+  }
 
   /* Partie Contact */
 
   section#contact {
-    background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(212,203,255,1) 100%); 
+    background-color: rgb(30, 143, 255);
+    background-blend-mode: multiply;
+    background-image: url(../images/fond-brique.avif);
+    background-attachment: fixed;
   }
   
 
@@ -263,14 +277,14 @@ section {
   .form-container button {
     padding: 10px;
     font-size: 16px;
-    background-color: #26a69a;
+    background-color: rgb(30, 143, 255);
     color: #ffffff;
     border: none;
     cursor: pointer;
     transition: background-color 0.3s ease-in-out;
   }
   .form-container button:hover {
-    background-color: #00796b;
+    background-color: rgba(30, 143, 255, 0.6);
   }
   
   .form-reseaux{
