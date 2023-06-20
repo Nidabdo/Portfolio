@@ -77,6 +77,7 @@ section {
     background-image: url(../images/macbook.jpg);
     background-size: 100%;
     background-attachment: fixed;
+    background-repeat: no-repeat;
     color: white;
     text-align: center;
   }
