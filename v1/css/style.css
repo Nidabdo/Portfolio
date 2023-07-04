@@ -64,7 +64,6 @@ section {
   h2 {
     padding: 40px 0px 0px 0px;
     font-size: 3em;
-    
   }
   
   p {
@@ -74,7 +73,7 @@ section {
   /* Partie Home */
 
   section#home {
-    background-image: url(../images/macbook.jpg);
+    background-image: url(../images/bg-portfolio.jpg);
     background-size: 100%;
     background-attachment: fixed;
     background-repeat: no-repeat;
@@ -83,7 +82,34 @@ section {
   }
 
   section#home article {
-    padding-top: 5%;
+    padding-top: 25%;
+  }
+
+  .hp-center-text{
+    display: grid;
+    place-items: center;
+  }
+
+  .typing-effect{
+    width: 37ch;
+    animation: typing 2s steps(37), blink .5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid;
+    font-family: monospace;
+    font-size: 2em;
+  }
+  
+  @keyframes typing {
+    from {
+      width: 0
+    }
+  }
+      
+  @keyframes blink {
+    50% {
+      border-color: transparent
+    }
   }
 
   /* Partie About */
@@ -196,43 +222,18 @@ section {
     align-items: center;
   }
 
-  .container {
+  .xp-container {
     border: 2px solid black;
-    width: 1300px;
-    height: 750px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
   }
-  .box{
+  .xp-box{
     border: 2px solid red;
-    width: 400px;
-    height: 300px;
+
   }
   /* Partie Parcours */
 
- /*  section#parcours {
-    background: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  section#parcours article
-  .parcours-container{
-    display:flex;
-    justify-content: space-between;
-    width: 1300px;
-    height: 600px;
-    border: 2px solid red;
-  }
-
-  .parcours-card{
-    display: flex;
-    width: 30%;
-    height: 500px;
-    border: 2px solid black;
-  } */
   section#parcours h2{
     text-align: center;
   }
