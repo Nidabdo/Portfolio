@@ -7,6 +7,15 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/reset.css">
     <title>Portfolio</title>
+    <script src="index.js"></script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+      (function(){
+          emailjs.init("jZWwSnl782US_8SI2");
+      })();
+    </script>
 </head> 
 <body>
   <nav>
@@ -107,15 +116,14 @@
             <div class="form-reseaux">
               <h3>Pour me contacter :</h3><a href="https://github.com/Nidabdo" target="_blank"><img src="./images/github.png" alt="github"></a><a href="https://www.linkedin.com/in/nicolas-lambert-980465241/" target="_blank"><img src="./images/linkedin.png" alt="linkedin"></a><a href="mailto:nicolas.lambert02@orange.fr"><img src="./images/email.png" alt="email"></a>
             </div>
-            <form>
-              <label for="nom">Nom :</label>
-              <input type="text" id="nom" name="nom" placeholder="Entrez votre nom" required>
-              <label for="prenom">Prénom :</label>
-              <input type="text" id="prenom" name="prenom" placeholder="Entrez votre prénom" required>
-              <label for="sujet">Sujet :</label>
-              <input type="text" id="sujet" name="sujet" placeholder="Entrez le sujet de votre message" required>
-              <label for="message">Message :</label>
-              <textarea id="message" name="message" placeholder="Entrez votre message" required></textarea>
+            <form id="contact-form">
+              <input type="hidden" name="contact_number">
+              <label>Nom :</label>
+              <input type="text" id="name" name="user_name" placeholder="Entrez votre nom" required>
+              <label>Email :</label>
+              <input type="email" id="email" name="user_email" placeholder="Entrez votre adresse mail" required>
+              <label>Message :</label>
+              <textarea name="message" id="message" placeholder="Entrez votre message" required></textarea>
               <button type="submit">Envoyer</button>
             </form>
           </div>
