@@ -213,6 +213,12 @@ section {
 
   section#experience h2{
     text-align: center;
+    color:white;
+  }
+
+  section#experience img{
+    margin-top: 1%;
+    margin-bottom: 2%;
   }
 
   section#experience article{
@@ -223,14 +229,18 @@ section {
   }
 
   .xp-container {
-    border: 2px solid black;
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     justify-content: space-between;
+    height: 800px;
   }
   .xp-box{
-    border: 2px solid red;
-
+    height: 30%;
+    background-color: white;
+    border-radius: 25px;
+    border: 1px solid #ccc;
+    box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.3);
+    padding: 20px;
   }
   /* Partie Parcours */
 
