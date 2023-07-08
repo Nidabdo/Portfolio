@@ -28,6 +28,7 @@ window.onload = function() {
         emailjs.sendForm('service_mfsg0sa', 'template_o3863mi', this)
             .then(function() {
                 console.log('SUCCESS!');
+                alert("Votre message à été envoyer");
             }, function(error) {
                 console.log('FAILED...', error);
             });
