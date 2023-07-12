@@ -317,6 +317,10 @@ section {
     margin-bottom: 6%;
   }
 
+  .text{
+    width: 100%;
+  }
+
 
 
   /* Partie Contact */
@@ -399,13 +403,147 @@ section {
     font-family: 'Poppins';
   }
   
-  @media screen and (max-width: 768px) {
-    .container {
+  @media screen and (max-width: 800px) {
+    
+    h2 {
+      font-size: 1.8em;
+    }
+    
+  
+
+    .main-nav a{
+      font-size: 13px;
+    }
+
+    .main-nav {
+      padding-left: 2%;
+      padding-right: 2%;
+    }
+
+    /* Home */
+
+    .typing-effect{
+      font-size: 15px;
+    }
+    section#home h2{
+      font-size: 30px;
+    }
+
+    section#home article{
+      overflow: hidden;
+    }
+
+    /* about me */
+    
+    section#about {
+      padding-top: 4%;
+      background-color: white;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+    }
+  
+    .profil {
+      width: auto;
+      height: 50%;
+      display: flex;
+    }
+    .cadre{
+      display: flex;
+      padding-top: 50px;
+      padding-left: 50px;
+      width: 40%;
+    }
+  
+  
+    .cadre img{
+      border: 1px solid black;
+      box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.3);
+      border-radius: 50%;
+      width: 200px;
+      height: 200px;
+      transition: transform .3s;
+    }
+    
+    .cadre img:hover{
+      filter: none;
+      -webkit-filter: grayscale(0);
+      transform: scale(1.2);
+    }
+    .desc{
+      width: 70%;
+      margin-top: 50px;
+    }
+    
+    .profil-bas{
+      display: flex;
+      height: 50%;
+      width: 100%;
+    }
+  
+    .skill{
+      text-align: center;
+      width: 55%;
+      padding-top: 30px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+    }
+  
+    .langage{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: rgba(30, 143, 255, 0.200);
+      border-radius: 20px;
+      height: 50%;
+      width: 100%;
+    }
+    .langage img{
+      width: 80px;
+      height: 80px;
+    }
+    .info {
+      width: 45%;
+      height: 50%;
+      padding-top: 80px;
+      padding-left: 50px;
+    }
+  
+    section#about article{
+      margin-top: 2%;
+      background-color: white;
+      border: 1px solid #ccc;
+      padding: 20px;
+      box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.3);
+      width: 1000px;
+      height: 600px;
+      display: flex;
       flex-wrap: wrap;
     }
-    .form-container {
-      flex-basis: 100%;
+
+    /* Parcours */
+
+    
+    .parcours-container{
+      display: flex;
+      flex-direction: column;
+
     }
+
+    /* Contact */
+
+    .form-reseaux {
+      flex-wrap:wrap ;
+    }
+
+    section{
+      overflow: hidden;
+    }
+
+    section#contact h3{
+      font-size: 1em;
+    }
+
   }
-  
-  
